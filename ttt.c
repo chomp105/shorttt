@@ -1,39 +1,12 @@
 #include <stdio.h>
-void printboard(int board[3][3]) {
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 3; j++) {
-			printf("%d", board[i][j]);
-		}
-		printf("\n");
-	}
-}
-void move(int board[3][3], int player) {
-	int x, y;
-	scanf("%d", &x);
-	scanf("%d", &y);
-	board[y][x] = player;
-}
-int checkwin(int board[3][3]) {
-	for (int i = 0; i < 3; i++) {
-		if ((board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][2] != 0) ||
-		    (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[2][i] != 0)) {
-			return 1;
-		}
-	}
-	if ((board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[2][2] != 0) ||
-	    (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[2][0] != 0)) {
-		return 1;
-	}
-	return 0;
-}
+char b[3][4]={"---\n","---\n","---\n"};
+int p,w=0,c=0;
 int main(void) {
-	int board[3][3] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-	for (int i = 0; i < 9; i++) {
-		printboard(board);
-		move(board, i % 2 + 1);
-		if (checkwin(board)) {
-			break;
-		}
-	}
+	printf("%s",b);
+	scanf("%d",&p);
+	b[p%10][(p-(p%10))/10]=c%2+49;
+	for (int i=0;i<3;i++) w+=((b[i][0]==b[i][1]&&b[i][1]==b[i][2]&&b[i][2]!='-')||(b[0][i]==b[1][i]&&b[1][i]==b[2][i]&&b[2][i]!='-'));
+	w+=((b[0][0]==b[1][1]&&b[1][1]==b[2][2]&&b[2][2]!='-')||(b[0][2]==b[1][1]&&b[1][1]==b[2][0]&&b[2][0]!='-'));
+	if (++c<=9&&!w) main();
 	return 0;
 }
