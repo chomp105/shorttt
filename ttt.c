@@ -1,6 +1,5 @@
 #include <stdio.h>
-char b[3][4]={"---\n","---\n","---\n"};
-int p,w=0,c=0;
+char b[3][4]={"---\n","---\n","---\n"},p,w=0,c=0;
 int main(void) {
 	printf("%s",b);
 	scanf("%d",&p);
