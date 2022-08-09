@@ -1,4 +1,4 @@
-TicTacToe in 12 lines
+TicTacToe in 10 lines
 ---------------------
 
 How to play:
