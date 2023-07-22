@@ -1,3 +1,4 @@
+/*
 * A single integer (4 bytes) variable will hold all of the game data
 *
 * Count:        The program loop counter                    (nibble)
@@ -14,3 +15,4 @@
 *           ┌───┴────┐   ┌──────┴──────┐
 *           │ player │   │ first board │
 *           └────────┘   └─────────────┘
+*/
