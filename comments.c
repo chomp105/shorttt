@@ -50,7 +50,7 @@ int main() {
     * by shifting over a negative amount, the bit travels from the far right to the far left.
     * 
     * The characters 1-9 (ascii 49-57) loop the 1 through all 32 bits and back to the left with
-    * 17-25 shifts to go. When we subtract 7 from the -getchar(), we effectively change those shifts to
+    * 17-25 shifts to go. When 7 is subtracted from the -getchar(), we effectively change those shifts to
     * 24-32 bits to go. This puts us in range for the first board. ` + 9 * (_ >> 18 & 1)` is used to
     * move back to the second board in the case that it is O's turn. The 18th bit is shifted to the 1s place
     * and then AND against 1 in order to remove all other bits from the result. This effectively returns
@@ -121,7 +121,7 @@ int main() {
     * ┌────────────┐
     * │ 1 11000000 │ (decimal 448)
     * └────────────┘
-    * can be shifted to the right by 6 bits (where Count == 2) so that we can check it against against 7 instead of 448, just like if it had
+    * can be shifted to the right by 6 bits (where Count == 2) so that it can be against 7 instead of 448, just like if it had
     * been 7 to begin with. The shift for horizantal wins is multiplied by 3, as shown previously. When checking for vertical wins,
     * The shift is just Count.
     * 
@@ -157,7 +157,7 @@ int main() {
     
     /*
     * This resets the Count to 9. Since it was left at 3 by the win checking,
-    * we simply add six to it.
+    * 6 is added to it.
     */
 
     _ += 6 << 24;
