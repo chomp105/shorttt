@@ -1,12 +1,12 @@
 /*
 * A single integer (4 bytes) holds all of the game data.
 *
-* Count:        The loop counter for win checking           (nibble)
-*               (Padding for the overflow of Turn)          (bit)
-* Turn:         The program loop counter                    (nibble)
-* Player:       Holds the current player id                 (bit)
 * First board:  Holds the game state for the first player   (byte + bit)
 * Second board: Holds the game state for the second player  (byte + bit)
+* Player:       Holds the current player id                 (bit)
+* Turn:         The program loop counter                    (nibble)
+*               (Padding for the overflow of Turn)          (bit)
+* Count:        The loop counter for win checking           (nibble)
 * 
 *   ┌──────┐  ┌──────────────┐
 *   │ turn ├┐ │ second board │
