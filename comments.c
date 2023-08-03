@@ -50,7 +50,7 @@ int main() {
     * by shifting over a negative amount, the bit travels from the far right to the far left.
     * 
     * The characters 1-9 (ascii 49-57) loop the 1 through all 32 bits and back to the left with
-    * 17-25 shifts to go. When 7 is subtracted from the -getchar(), we effectively change those shifts to
+    * 17-25 shifts to go. When 7 is subtracted from the -getchar(), the shifts are changed to
     * 24-32 bits to go. This puts us in range for the first board. ` + 9 * (_ >> 18 & 1)` is used to
     * move back to the second board in the case that it is O's turn. The 18th bit is shifted to the 1s place
     * and then AND against 1 in order to remove all other bits from the result. This effectively returns
@@ -74,9 +74,9 @@ int main() {
     * 1. The screen should be cleared every loop around
     * 2. The enter key in the input buffer needs to be accounted for
     * 
-    * Because getchar will read our enter key the next time it is called, we need to
-    * remove that from the buffer. All we have to do is print it out right before
-    * we clear the screen. The code `"\e[1;1H\e[2J"` is used for the actual clearing.
+    * Because getchar will read our enter key the next time it is called, it needs to
+    * removed from the buffer. It gets printed out right before the screen is cleared.
+    * The code `"\e[1;1H\e[2J"` is used for the actual clearing.
     * I don't actually know what its doing and I'm too lazy to research.
     */
 
@@ -93,9 +93,9 @@ int main() {
         /*
         * The print loop uses a call to printf with two characters. The first character is for the
         * X, O, or blank space. The second character is set to either 0 or '\n' (decimal 10) depending on
-        * if Count - 1 is a multiple of 3. Count - 1 is used because we want it to breakline at 7, 4, and 1.
+        * if Count - 1 is a multiple of 3. Count - 1 is used so that it will breakline at 7, 4, and 1.
         * If the second character is 0, there will be practically nothing printed to the screen. I say
-        * "practically" because the character is technically there, but it is nothing we can see.
+        * "practically" because the character is technically there, but it is nothing visible.
         * 
         * The default value for the first character is '_' (decimal 95). To get to an X or O, one of two values
         * is subtracted from the default. These two values are multipled by checks on the boards to see which should be used.
