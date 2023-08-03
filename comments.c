@@ -34,7 +34,7 @@ int main() {
 
     /*
     * Turn is incremented at the start of the function.
-    * As noted before, instead of writing out the real decimal representation
+    * As noted before, instead of writing out the real decimal representation,
     * the use of the left bit shift operator has been used to move 1 over
     * enough bits that it increments Turn. This method of getting and setting data
     * in the integer will be used throughout this program.
