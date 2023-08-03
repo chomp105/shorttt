@@ -1,5 +1,6 @@
 TicTacToe with a single variable
 --------------------------------
+
 ```c
 int _=303<<19;int main(){_+=1<<19;_|=1
 <<(-getchar()-7+9*(_>>18&1));printf(//
@@ -13,3 +14,5 @@ _>>24)-1)%3)*10);for(;_>>24<3;_+=1<<24
 >>18&1)&84)==84)return 0;_+=6<<24;_^=1
 <<18;return _>>22&1?0:main();}/*seal*/
 ```
+
+I think I started this project out with goals in mind. I can't remember, though. Anyway its a tictactoe game using only a single variable.
