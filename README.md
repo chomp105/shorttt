@@ -17,6 +17,9 @@ _>>24)-1)%3)*10);for(;_>>24<3;_+=1<<24
 
 I think I started this project out with goals in mind. I can't remember, though. Anyway its a tictactoe game using only a single variable.
 
+## Understanding the code
+I did my best to explain the inner workings of the program in the comments.c file
+
 ## Playing the game
 Players take turns placing an X or O on the board through the use of the 1-9 keys. They correspond to the spaces on the board like so:
 ```
