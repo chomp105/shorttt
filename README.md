@@ -16,3 +16,35 @@ _>>24)-1)%3)*10);for(;_>>24<3;_+=1<<24
 ```
 
 I think I started this project out with goals in mind. I can't remember, though. Anyway its a tictactoe game using only a single variable.
+
+## Playing the game
+Players take turns placing an X or O on the board through the use of the 1-9 keys. They correspond to the spaces on the board like so:
+```
+123
+456
+789
+```
+To play, simply type your input number and press enter.
+
+**⚠️ WARNING: THIS PROGRAM EXPECTS PERFECT INPUT.** If you tell it to place your piece at "UNICORN" or where someone has already gone, and it breaks, then it's on you.
+
+## Installing and running the game
+Requirements:
+- a modern C compiler
+- make
+- git (if you dont want to copy and paste code)
+
+Download the repo
+```bash
+git clone https://github.com/chomp105/shorttt
+cd shorttt
+```
+Compile the code
+```bash
+make
+```
+Run the code
+
+*nix: `./shorttt`
+
+windows: `shorttt`
