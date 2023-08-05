@@ -44,7 +44,7 @@ int main() {
 
     /*
     * In order to place the user input on the board,
-    * The result of getchar() is used in a hacky technique that allows one to
+    * the result of getchar() is used in a hacky technique that allows one to
     * shift something a negative amount to the left. Normally, bits that
     * are shifted over fall off the end and dont loop back around. However,
     * by shifting over a negative amount, the bit travels from the far right to the far left.
@@ -53,9 +53,9 @@ int main() {
     * 17-25 shifts to go. When 7 is subtracted from the -getchar(), the shifts are changed to
     * 24-32 bits to go. This puts us in range for the first board. ` + 9 * (_ >> 18 & 1)` is used to
     * move back to the second board in the case that it is O's turn. The 18th bit is shifted to the 1s place
-    * and then AND against 1 in order to remove all other bits from the result. This effectively returns
-    * a 0 if its X's turn, and a 1 if it's O's turn. If it is a 1, then 9 gets added, shifting the input
-    * 9 digits back.
+    * and then ANDed against 1 in order to remove all other bits from the result. This effectively returns
+    * a 0 if it's X's turn, and a 1 if it's O's turn. If it is a 1, then 9 gets added, shifting the input
+    * 9 bits to the left.
     * 
     * ┌────────────────────────────┐
     * │┌───────────────────────────┼────────────┐
@@ -70,13 +70,13 @@ int main() {
 
     /*
     * This printf solves two problems in one line:
-    * 
-    * 1. The screen should be cleared every loop around
+    * e
+    * 1. The screen should be cleared every turn of the game
     * 2. The enter key in the input buffer needs to be accounted for
     * 
     * Because getchar will read our enter key the next time it is called, it needs to
     * removed from the buffer. It gets printed out right before the screen is cleared.
-    * The code `"\e[1;1H\e[2J"` is used for the actual clearing.
+    * The escape code `"\e[1;1H\e[2J"` is used for the clearing.
     * I don't actually know what its doing and I'm too lazy to research.
     */
 
@@ -84,7 +84,7 @@ int main() {
 
     /*
     * This is the print loop. Count was set to 9, and will go until it reaches 1.
-    * Because it is still decremented on the final iteration, it will be at 0 when the next loop runs.
+    * Because it's still decremented on the final iteration, it will be at 0 once the loop finishes.
     * Count is obtained or changed by shifting to the 25 bit. (<< 24 or >> 24)
     */
 
