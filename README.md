@@ -32,6 +32,7 @@ To play, simply type your input number and press enter.
 Requirements:
 - GCC
 - git (if you dont want to copy and paste code)
+- python (if you're on windows)
 
 If you don't have access to GCC, you can go to [onlinegdb](https://www.onlinegdb.com/) to run the code.
 Simply copy and paste the code in, and set the language to C. When you run it, you will get compiler warnings, however you can simply ignore them.
@@ -40,6 +41,10 @@ Download the repo
 ```bash
 git clone https://github.com/chomp105/shorttt
 cd shorttt
+```
+Skip this step if you aren't on windows
+```batch
+python3 win.py && del win.py
 ```
 Compile the code
 ```bash
