@@ -30,9 +30,12 @@ To play, simply type your input number and press enter.
 
 ## Installing and running the game
 Requirements:
-- a modern C compiler
+- GCC
 - make
 - git (if you dont want to copy and paste code)
+
+If you don't have access to GCC or make, you can go to [onlinegdb](https://www.onlinegdb.com/) to run the code.
+Simply copy and paste the code in, and set the language to C. When you run it, you will get compiler warnings, however you can simply ignore them.
 
 Download the repo
 ```bash
