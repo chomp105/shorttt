@@ -51,7 +51,7 @@ python3 win.py && del win.py
 ```
 Compile the code
 ```bash
-gcc shorttt.c -o shorttt
+gcc shorttt.c -ow shorttt
 ```
 Run the code
 
