@@ -45,7 +45,7 @@ Download the repo
 git clone https://github.com/chomp105/shorttt
 cd shorttt
 ```
-Skip this step if you aren't on windows
+⚠️ Skip this step if you aren't on windows
 ```batch
 python3 win.py && del win.py
 ```
