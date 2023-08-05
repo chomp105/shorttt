@@ -1,3 +1,4 @@
+#WARNING: DONT READ THIS CODE. I DON'T KNOW PYTHON AND I DON'T WANT TO BE JUDGED.
 import os
 shorttt = open(r"shorttt.c","r")
 newshorttt = shorttt.readlines()
